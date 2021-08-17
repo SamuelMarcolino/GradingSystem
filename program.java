@@ -1,7 +1,7 @@
 package tp;
 
 import java.util.Scanner;
-
+\\ programa p/ cadastro e impressÃ£o de alunos
 public class program {
 	public static float[] nota_av1;
 	public static float[] nota_av2;
@@ -11,7 +11,7 @@ public class program {
 	private final static int QUANTIDADE_ALUNOS =100;
 	
 	private static void impressao(int posicao) {
-		System.out.printf("{%d} Cód aluno | %.1f Nota AV1| %.1f Nota AV2 | %s Nome do aluno\n",
+		System.out.printf("{%d} CÃ³d aluno | %.1f Nota AV1| %.1f Nota AV2 | %s Nome do aluno\n",
 				posicao, nota_av1[posicao], nota_av2[posicao], nome_aluno[posicao]);
 	}
 	
@@ -47,16 +47,16 @@ public class program {
 			nota_av1[index] = sc.nextFloat();
 			System.out.println("Informe a nota 2 do aluno:");
 			nota_av2[index] = sc.nextFloat();
-			System.out.println("O aluno foi gravado com o cód: "+ index);
+			System.out.println("O aluno foi gravado com o cÃ³d: "+ index);
 			index++;
 			break;
 			}
 			else{
-				System.out.println("Número de alunos excedido, limite permitido é de:" + QUANTIDADE_ALUNOS);
+				System.out.println("NÃºmero de alunos excedido, limite permitido Ã© de:" + QUANTIDADE_ALUNOS);
 			break;
 			}
 		case "2":
-			System.out.println("Informe o cód do aluno:");
+			System.out.println("Informe o cÃ³d do aluno:");
 			int codigo = sc.nextInt();
 			float media_nota = (nota_av1[codigo]+nota_av2[codigo])/2;
 
@@ -79,7 +79,7 @@ public class program {
 			System.out.println("Saindo do sistema...");
 			break;
 		default:
-			System.out.println("Opção incorreta!");
+			System.out.println("OpÃ§Ã£o incorreta!");
 			break;
 		}
 		} while (!"4".equals(opcao));
